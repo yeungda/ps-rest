@@ -1,2 +1,4 @@
 ps-web/.idea
 .DS_Store
+ps-web/target
+ps-web/.sass-cache
