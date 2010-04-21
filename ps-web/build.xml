@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="client" default="all">
+
+    <target name="all" depends="clean, compile"/>
+
+    <target  name="clean">
+        <delete dir="${basedir}/target"/>
+    </target>
+
+    <target name="compile" description="renders haml, sass and copy images and javascripts">
+        <mkdir dir="${basedir}/target"/>
+        <exec executable="ruby" failonerror="true">
+            <arg value="compile.rb"/>
+            <arg value="${basedir}/target/compiled-client"/>
+        </exec>
+    </target>
+
+    <target name="start-dev-client" description="start client web server">
+        <exec executable="ruby" failonerror="true">
+            <arg value="client.rb"/>
+        </exec>
+    </target>
+
+</project>

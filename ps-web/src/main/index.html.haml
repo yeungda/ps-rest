@@ -1,0 +1,17 @@
+!!! strict
+
+%head
+  %title Hello World
+
+  %link(href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css")
+  %link(href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css")
+  /[if lt IE 8]
+    %link(href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css")
+%body
+  #container
+    %h1 hello haml
+    %h1
+      %script(src="javascript/javascript.js" type="text/javascript")
+    %h1
+      %script(src="javascript/coffeescript.js" type="text/javascript")
+    %img(src="images/facepalm.jpg" title="hello image")
